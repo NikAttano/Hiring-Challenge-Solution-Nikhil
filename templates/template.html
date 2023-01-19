@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Challenge Web</title>
+</head>
+<body>
+    <form>
+        <div style="display: flex; width: 100%;">
+          <div>
+              <label for="hub">Hub<span style="color: red;">*</span></label>
+              <br>
+              <input type="text" id="name" name="hub" value="{{data.get('hub')}}" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;" required>
+          </div>
+          <div style="margin-left: 100px;">
+              <label for="grn">GRN</label>
+              <br>
+              <input type="name" id="grn" name="grn" value="{{data.get('grn')}}" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;">
+          </div>
+        </div>
+        <br>
+        <label for="supplier">Supplier<span style="color: red;">*</span></label>
+        <br>
+        <input type="name" id="supplier" name="supplier" value="{{data.get('supplier')}}" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;" required>
+        <br>
+        <br>
+        <label for="suppliername">Supplier Name</label>
+        <br>
+        <input type="name" id="suppliername" name="suppliername" value="{{data.get('supplier_name')}}" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;">
+        <br>
+    </form> 
+    <br>
+    <br>  
+    <b>SKU Summary</b>
+    <br>
+    <br> SKU Table <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+    <thead>
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">
+        <input type="radio" name="select" value="0"> No.
+      </th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">SKU</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">SKU Decription</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: right;">Standard Crate Quantity</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: right;">Procured Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black; padding: 5px;">
+        <input type="radio" name="select" value="1"> 1
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">
+        <b>{{data.sku_table[0].get('sku')}}</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">{{data.sku_table[0].get('sku_description')}}</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">{{data.sku_table[0].get('standard_crate_quantity')}}</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">
+        <b>{{data.sku_table[0].get('quantity')}}</b>
+      </td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <br>
+    <b>Crate List</b>
+    <br>
+    <br> Crate Table <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+    <thead>
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">
+        <input type="radio" name="select" value="0"> No.
+      </th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">Crate</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">SKU</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: right;">Packed Quantity</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">Crate weight</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">Is Final Crate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black; padding: 5px;">
+        <input type="radio" name="select" value="1"> 1
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">
+        <b>{{data.crate_table[0].get('crate')}}</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">{{data.crate_table[0].get('sku')}}</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">{{data.crate_table[0].get('packed_quantity')}}</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">
+        <b>{{data.crate_table[0].get('crate_weight')}}</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px; text-align: left;">
+        <b>{{data.crate_table[0].get('is_final_crate')}}</b>
+      </td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black; padding: 5px;">
+        <input type="radio" name="select" value="1"> 2
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">
+        <b>{{data.crate_table[1].get('crate')}}</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">{{data.crate_table[1].get('sku')}}</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">{{data.crate_table[1].get('packed_quantity')}}</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">
+        <b>{{data.crate_table[1].get('crate_weight')}}</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px; text-align: left;">
+        <b>{{data.crate_table[1].get('is_final_crate')}}</b>
+      </td>
+    </tr>
+    </tbody>
+    </table>        
+</body>
+</html>

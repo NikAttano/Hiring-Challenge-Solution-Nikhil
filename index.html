@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Challenge Web</title>
+</head>
+<body>
+    <form>
+        <div style="display: flex; width: 100%;">
+          <div>
+              <label for="hub">Hub<span style="color: red;">*</span></label>
+              <br>
+              <input type="text" id="name" name="hub" value="SOMEHUB" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;" required>
+          </div>
+          <div style="margin-left: 100px;">
+              <label for="grn">GRN</label>
+              <br>
+              <input type="name" id="grn" name="grn" value="None" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;">
+          </div>
+        </div>
+        <br>
+        <label for="supplier">Supplier<span style="color: red;">*</span></label>
+        <br>
+        <input type="name" id="supplier" name="supplier" value="SOMEID" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;" required>
+        <br>
+        <br>
+        <label for="suppliername">Supplier Name</label>
+        <br>
+        <input type="name" id="suppliername" name="suppliername" value="Sunil N" style="background-color: #f2f2f2;border: none; width: 500px; height: 30px;">
+        <br>
+    </form> 
+    <br>
+    <br>  
+    <b>SKU Summary</b>
+    <br>
+    <br> SKU Table <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+    <thead>
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">
+        <input type="radio" name="select" value="0"> No.
+      </th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">SKU</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">SKU Decription</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: right;">Standard Crate Quantity</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: right;">Procured Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black; padding: 5px;">
+        <input type="radio" name="select" value="1"> 1
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">
+        <b>10000298</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">Mango Banganapalli 1 kg</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">18000</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">
+        <b>36190</b>
+      </td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <br>
+    <b>Crate List</b>
+    <br>
+    <br> Crate Table <table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+    <thead>
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">
+        <input type="radio" name="select" value="0"> No.
+      </th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">Crate</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">SKU</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: right;">Packed Quantity</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">Crate weight</th>
+      <th style="border: 1px solid black; padding: 5px; text-align: left;">Is Final Crate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black; padding: 5px;">
+        <input type="radio" name="select" value="1"> 1
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">
+        <b>3e410b75b4</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">10000298</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">18100</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">
+        <b>18100</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px; text-align: left;">
+        <b>0</b>
+      </td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <td style="border: 1px solid black; padding: 5px;">
+        <input type="radio" name="select" value="1"> 2
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">
+        <b>7c2eba029c</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px;">10000298</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">18090</td>
+      <td style="border: 1px solid black; padding: 5px; text-align: right;">
+        <b>18090</b>
+      </td>
+      <td style="border: 1px solid black; padding: 5px; text-align: left;">
+        <b>0</b>
+      </td>
+    </tr>
+    </tbody>
+    </table>        
+</body>
+</html>
